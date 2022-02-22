@@ -1,15 +1,15 @@
 # ArcGIS-Android-Cluster
-使用ArcGIS Runtime SDK for Android实现的点聚合。
+Point aggregation implemented using ArcGIS Runtime SDK for Android.
 
-## 版本要求
+## Version requirements
 ArcGIS Runtime SDK for Android 100.5
 
-## GraphicsOverlay效果图
+## GraphicsOverlay Rendering
 
-![效果图](screenshot.png)
+![Rendering](screenshot.png)
 
 
-## 生成随机点
+## Generate random points
 ```java
 for (int i = 0; i < 1000; i++) {
     double lat = Math.random() + 39.474923;
@@ -19,7 +19,7 @@ for (int i = 0; i < 1000; i++) {
     graphicsOverlay.getGraphics().add(gra);
 }
 ```
-## 地图比例尺变化
+## Map Sclae Changed
 ```java
 mapView.addMapScaleChangedListener(new MapScaleChangedListener() {
     @Override
@@ -31,11 +31,11 @@ mapView.addMapScaleChangedListener(new MapScaleChangedListener() {
 });
 ```
 
-## 支持FeatureLayer
+## Support FeatureLayer
 
-![效果图](featurelayer.png)
+![Rendering](featurelayer.png)
 
-## FeatureLayer的查询
+## FeatureLayer query
 ```java 
 private void _clusterFeatures() {
     QueryParameters queryParameters = new QueryParameters();
